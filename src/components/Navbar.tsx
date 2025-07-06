@@ -22,9 +22,6 @@ const Navbar = () => {
           <li>
             <Link to="/proyectos" className={styles.navLink}>Projects</Link>
           </li>
-          <li>
-            <Link to="/contacto" className={styles.navLink}>Contact</Link>
-          </li>
         </ul>
 
         <ThemeToggleButton />

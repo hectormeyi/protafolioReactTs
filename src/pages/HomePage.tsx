@@ -23,7 +23,7 @@ const HomePage = () => {
       <div className={styles.leftContent}>
         <Typewriter key={keyRef.current} text={introText} speed={75} />
         <p className={styles.subtitle}>
-          Apasionado por crear soluciones web modernas y funcionales.
+          "I specialize in creating modern, functional web solutions. I enhance my projects by leveraging AI for innovative features and am committed to producing clear, well-structured documentation for maintainability and clarity."
         </p>
         {/* Aquí puedes añadir un botón de "Ver mis proyectos" o similar */}
       </div>

@@ -5,8 +5,6 @@ import profileImage from '../assets/programador.png';
 import { SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiSpringboot, SiExpress, SiHtml5, SiCss3, SiMysql, SiMongodb, SiGit, SiFigma } from 'react-icons/si';
 import { FaJava, FaNpm, FaDatabase } from 'react-icons/fa';
 
-// ... (const skills = [...] se queda igual)
-
 const skills = [
   { name: 'JavaScript', icon: <SiJavascript style={{ color: '#F7DF1E' }} /> },
   { name: 'TypeScript', icon: <SiTypescript style={{ color: '#3178C6' }} /> },
@@ -26,22 +24,30 @@ const skills = [
 ];
 
 const AboutMePage = () => {
-  // ... (todo el return con tu JSX va aquí)
   return (
     <div className={styles.aboutContainer}>
-      {/* ... todo el contenido del componente ... */}
       <div className={styles.aboutContent}>
         <div className={styles.textSection}>
           <h1 className={styles.title}>About Me</h1>
           <p className={styles.paragraph}>
-            For the past 15 months, I have been fully immersed in the dynamic world of software development. This journey is fueled by a deep passion for technology and a love for building innovative and efficient solutions that tackle real-world problems. For me, programming is more than just writing code; it's a continuous path of creative problem-solving.
+            My 15-month journey in software development is fueled by a deep passion for technology and a fascination with building solutions that solve real-world problems. I see programming as more than just writing code; it's a continuous path of creative problem-solving and constant learning.
           </p>
           <p className={styles.paragraph}>
-            I am driven by a constant desire to learn, adapt, and grow as a professional. This mindset extends beyond the screen. In my free time, I enjoy the strategic thinking of chess ♟️ and stay active at the gym 💪. I'm also an avid reader and am dedicated to mastering English, always seeking new ways to expand my knowledge.
+            I've had the opportunity to apply my skills in practical settings, actively participating in the <strong>internal software factory at SENA</strong> and the <strong>development seedbed at the Cognitus Foundation</strong>. In these environments, I collaborated on real-world projects, building software for clients such as the <strong>Colombo Americano de Armenia</strong> and other businesses, allowing me to gain valuable professional experience.
+          </p>
+          <p className={styles.paragraph}>
+            Beyond the screen, I believe in a balanced life. I enjoy the strategic thinking of chess ♟️ and stay active at the gym 💪. I'm also an avid reader and am dedicated to mastering English, always seeking new ways to expand my knowledge.
           </p>
         </div>
         <div className={styles.imageSection}>
           <img src={profileImage} alt="Héctor David Mejía Martínez" className={styles.profileImage} />
+          <a
+            href="/cv.png" // Recuerda poner tu CV en la carpeta 'public'
+            download="Hector_Mejia_CV.pdf"
+            className={styles.cvButton}
+          >
+            Download CV
+          </a>
         </div>
       </div>
 
@@ -59,6 +65,5 @@ const AboutMePage = () => {
     </div>
   );
 };
-
 
 export default AboutMePage;

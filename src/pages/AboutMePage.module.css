@@ -1,6 +1,4 @@
-/* ================================================================
-   VERSIÓN FINAL Y CORREGIDA de src/pages/AboutMePage.module.css
-   ================================================================ */
+/* src/pages/AboutMePage.module.css */
 
 .aboutContainer {
   max-width: 1200px;
@@ -99,8 +97,9 @@ body.dark .profileImage {
 
 /* ESTA ES LA ÚNICA REGLA QUE NECESITAMOS PARA LAS TARJETAS EN MODO OSCURO */
 body.dark .skillCard {
-  background-color: var(--footer-background); /* Fondo azul oscuro, igual al footer */
-  border-color: var(--border-dark);           /* Borde gris oscuro sutil */
+  background-color: var(--footer-background);
+  /*background-color: #2a3a50;   */             /* Fondo azul oscuro */
+  border-color: var(--border-dark);           /* Borde gris oscuro */
   color: var(--text-dark);                    /* Texto blanco para legibilidad */
 }
 
@@ -142,4 +141,37 @@ body.dark .skillCard:hover {
     flex-direction: column-reverse;
     gap: 2rem;
   }
+}
+/* --- ESTILOS PARA EL BOTÓN DE CV --- */
+.imageSection {
+  /* Convertimos la sección en una columna para poner el botón debajo */
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cvButton {
+  text-decoration: none;
+  color: var(--primary-light);
+  background-color: transparent;
+  border: 2px solid var(--primary-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cvButton:hover {
+  background-color: var(--primary-light);
+  color: var(--surface-light);
+}
+
+/* Estilos del botón para modo oscuro */
+body.dark .cvButton {
+  color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+body.dark .cvButton:hover {
+  background-color: var(--primary-dark);
+  color: var(--surface-dark);
 }
