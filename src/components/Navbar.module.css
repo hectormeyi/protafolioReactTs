@@ -1,0 +1,72 @@
+/* src/components/Navbar.module.css */
+.header {
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  /* Transición suave para el color de fondo */
+  transition: background-color 0.3s ease;
+}
+
+body.dark .header {
+  background-color: hsla(240, 6%, 12%, 0.8); /* Usamos --surface-dark con transparencia */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-dark); /* Añadimos un borde sutil */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navList {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  position: relative; /* Clave para el efecto de hover */
+  padding-bottom: 0.25rem;
+}
+
+/* El subrayado animado */
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-light);
+  transform: scaleX(0); /* Empieza sin ancho */
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+/* Cuando pasas el cursor, el subrayado aparece de derecha a izquierda */
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Ajuste de color para el tema oscuro */
+body.dark .navLink::after {
+  background-color: var(--primary-dark);
+}

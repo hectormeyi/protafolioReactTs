@@ -1,0 +1,50 @@
+/* src/components/Typewriter.module.css */
+.typewriterText {
+  font-size: 2.5rem; /* Tamaño de fuente grande */
+  font-weight: bold;
+  line-height: 1.2;
+  max-width: 800px; /* Ancho máximo para que el texto se ajuste */
+  margin: 2rem 0;
+  /* Usa el color primario para el texto */
+  color: var(--primary-light);
+}
+
+/* Ajuste de color para el tema oscuro */
+body.dark .typewriterText {
+  color: var(--primary-dark);
+}
+
+/* El cursor parpadeante */
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 2.5rem; /* Misma altura que el texto */
+  background-color: var(--primary-light);
+  margin-left: 8px;
+  /* La animación que lo hace parpadear */
+  animation: blink 1s infinite;
+}
+
+body.dark .cursor {
+    background-color: var(--primary-dark);
+}
+
+/* Definición de la animación de parpadeo */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Media query para hacer el texto más pequeño en móviles */
+@media (max-width: 768px) {
+    .typewriterText {
+        font-size: 1.8rem;
+    }
+    .cursor {
+        height: 1.8rem;
+    }
+}

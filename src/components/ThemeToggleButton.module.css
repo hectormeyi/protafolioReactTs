@@ -1,0 +1,35 @@
+/* src/components/ThemeToggleButton.module.css */
+.themeButton {
+  background-color: transparent;
+  border: 1px solid var(--text-light);
+  border-radius: 9999px;
+  cursor: pointer;
+  padding: 0.5rem; /* 8px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.themeButton:hover {
+  transform: scale(1.1);
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+body.dark .themeButton {
+  border-color: var(--text-dark);
+}
+
+/* NUEVO: Estilo base para los iconos */
+.icon {
+  font-size: 1.5rem; /* 24px */
+  display: block; /* Asegura que no haya espacios extra */
+}
+
+/* NUEVO: Clase específica para el color del sol */
+.sunIcon {
+  color: #facc15; /* Un bonito color amarillo */
+}

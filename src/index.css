@@ -1,0 +1,50 @@
+/* VERSIÓN FINAL Y CORRECTA de src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Definición de variables de color para los temas */
+:root {
+  /* TEMA CLARO */
+  --background-light: #f4f4f5;
+  --surface-light: #ffffff;
+  --border-light: #e4e4e7;
+  --text-light: #18181b;
+  --primary-light: #3b82f6;
+
+  /* TEMA OSCURO */
+  --background-dark: #18181b;
+  --surface-dark: #27272a;
+  --border-dark: #3f3f46;
+  --text-dark: #f4f4f5;
+  --primary-dark: #60a5fa;
+
+  /* COLOR DEL FOOTER */
+  --footer-background: #1e293b;
+  --footer-text: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+body.dark {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem;
+}

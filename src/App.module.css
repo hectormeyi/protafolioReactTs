@@ -1,0 +1,13 @@
+/* src/App.module.css */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.5rem; /* 40px */
+  font-weight: 700;
+  text-align: center;
+}

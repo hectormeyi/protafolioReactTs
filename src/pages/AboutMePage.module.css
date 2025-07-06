@@ -1,0 +1,145 @@
+/* ================================================================
+   VERSIÓN FINAL Y CORREGIDA de src/pages/AboutMePage.module.css
+   ================================================================ */
+
+.aboutContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* --- SECCIÓN SUPERIOR: TEXTO Y FOTO --- */
+
+.aboutContent {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.textSection {
+  flex: 2;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--primary-light);
+}
+body.dark .title {
+  color: var(--primary-dark);
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ESTILOS PARA LA FOTO DE PERFIL - Aseguran el tamaño correcto */
+.profileImage {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--border-light);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body.dark .profileImage {
+  border-color: var(--border-dark);
+}
+.profileImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --- SECCIÓN DE HABILIDADES --- */
+
+.skillsSection {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.skillsTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+}
+
+.skillCard {
+  background-color: var(--surface-light);
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+
+/* --- REGLAS DEFINITIVAS PARA MODO OSCURO Y HOVER --- */
+
+/* ESTA ES LA ÚNICA REGLA QUE NECESITAMOS PARA LAS TARJETAS EN MODO OSCURO */
+body.dark .skillCard {
+  background-color: var(--footer-background); /* Fondo azul oscuro, igual al footer */
+  border-color: var(--border-dark);           /* Borde gris oscuro sutil */
+  color: var(--text-dark);                    /* Texto blanco para legibilidad */
+}
+
+/* Efecto hover para modo claro */
+.skillCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-light);
+}
+
+/* Efecto hover para modo oscuro */
+body.dark .skillCard:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-dark);
+}
+
+.skillIcon {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillName {
+  font-weight: 500;
+  color: inherit; /* Hereda el color de .skillCard (blanco en modo oscuro) */
+}
+
+
+/* --- ANIMACIONES Y MEDIA QUERIES --- */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .aboutContent {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+}

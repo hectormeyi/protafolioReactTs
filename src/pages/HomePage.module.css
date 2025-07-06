@@ -1,0 +1,61 @@
+/* src/pages/HomePage.module.css (ACTUALIZADO) */
+
+.homeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.leftContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.rightContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileImage {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  margin-top: 40px; /* Baja la imagen un poco */
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  opacity: 0.8;
+  max-width: 90%;
+}
+
+@media (max-width: 900px) {
+  .homeContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .leftContent,
+  .rightContent {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .subtitle {
+    max-width: 100%;
+    text-align: center;
+  }
+}

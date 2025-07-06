@@ -1,0 +1,130 @@
+/* src/components/Footer.module.css */
+.footer {
+  padding: 2rem;
+  margin-top: auto; /* Empuja el footer hacia abajo */
+  background-color: #e4e4e7; /* Un gris claro para el tema light */
+  border-top: 1px solid #d4d4d8;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilos para el tema oscuro */
+body.dark .footer {
+  background-color: #27272a; /* Un gris oscuro para el tema dark */
+  border-top: 1px solid #3f3f46;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialIcon {
+  color: inherit;
+  font-size: 1.75rem; /* 28px */
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.socialIcon:hover {
+  transform: scale(1.2);
+  color: var(--primary-light); /* Usa el color primario al hacer hover */
+}
+
+body.dark .socialIcon:hover {
+    color: var(--primary-dark);
+}
+
+.copyright p {
+  margin: 0.25rem 0;
+  font-size: 0.875rem; /* 14px */
+}
+
+.madeWith {
+  opacity: 0.8;
+}
+body.dark .footer {
+  background-color: var(--surface-dark); /* Usamos el color de superficie */
+  border-top: 1px solid var(--border-dark); /* El borde ahora usa la nueva variable */
+}
+/* Estilos para el tema oscuro */
+body.dark .footer {
+  background-color: var(--surface-dark);
+  border-top: 1px solid var(--border-dark);
+  color: var(--text-dark); /* Asegúrate de que el color del texto general sea claro */
+}
+
+body.dark .socialIcon {
+  color: var(--text-dark); /* Los iconos también deben ser claros por defecto */
+}
+
+body.dark .socialIcon:hover {
+  color: var(--primary-dark);
+}
+
+body.dark .copyright p {
+  color: var(--text-dark); /* El texto del copyright debe ser claro */
+}
+
+/* src/components/Footer.module.css (ACTUALIZADO) */
+
+.footer {
+  padding: 2rem;
+  margin-top: auto;
+  /* Usamos el nuevo color de fondo universal para el footer */
+  background-color: var(--footer-background); 
+  /* Y el nuevo color de texto universal */
+  color: var(--footer-text); 
+  border-top: 1px solid transparent; /* Borde transparente por defecto */
+  transition: border-color 0.3s ease;
+}
+
+/* Le damos un color al borde solo en tema oscuro para separarlo del fondo */
+body.dark .footer {
+    border-top-color: var(--border-dark);
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialIcon {
+  /* El color es heredado de .footer (var(--footer-text)) */
+  color: inherit;
+  font-size: 1.75rem; /* 28px */
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.socialIcon:hover {
+  /* Al hacer hover, el icono se vuelve blanco puro para resaltar */
+  color: #ffffff; 
+  transform: scale(1.2);
+}
+
+.copyright p {
+  margin: 0.25rem 0;
+  font-size: 0.875rem; /* 14px */
+}
+
+.madeWith {
+  opacity: 0.7; /* Le bajamos un poco la opacidad para que no compita */
+}
